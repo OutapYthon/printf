@@ -46,6 +46,19 @@ int _printf(const char *format, ...)
                 write(1, "%", 1);
                 count++;
             }
+            else if (*format == 'd' || *format == 'i')
+            {
+                int num = va_arg(args, int);
+                char num_str[12]; // Assuming maximum integer length is 11 digits
+                snprintf(num_str, sizeof(num_str), "%d", num);
+                int len = 0;
+                while (num_str[len] != '\0')
+                {
+                    write(1, &num_str[len], 1);
+                    len++;
+                    count++;
+                }
+            }
         }
         else
         {

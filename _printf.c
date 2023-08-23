@@ -3,7 +3,7 @@
 #include "main.h"
 
 /**
- * _printf - Custom printf function by badr outazarine and houda laaziz
+ * _printf - Custom printf function
  * @format: The format string
  * @...: The variable arguments
  *
